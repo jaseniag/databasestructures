@@ -23,3 +23,30 @@ except mysql.connector.Error as err:
 # Close the cursor and database connection
 cursor.close()
 cnx.close()
+
+# DELIMITER //
+
+# CREATE PROCEDURE GetTotalSeats()
+# BEGIN
+#     SELECT SUM(AvailableSeats) AS TotalSeats FROM Flights;
+# END //
+
+# DELIMITER ;
+
+
+
+#DELIMITER //
+
+# CREATE FUNCTION AverageFlightPrice() RETURNS DECIMAL(10,2)
+# DETERMINISTIC
+# READS SQL DATA
+# BEGIN
+#     DECLARE result DECIMAL(10,2);
+#     SELECT AVG(Price) INTO result FROM Flights;
+#     RETURN result;
+# END //
+
+# DELIMITER ;
+
+
+
