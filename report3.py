@@ -45,7 +45,7 @@ for query_name, query_info in queries_with_variables.items():
     elif query_name == 'query4':
         # For the aggregation query, fetch and print the result
         total_seats = cursor.fetchone()
-        print(f"Total available seats for airline 'AA': {total_seats[0]}")
+        print(f" Results for query4:\n Total available seats for airline 'AA': {total_seats[0]}")
 
 # Close the cursor and the database connection
 cursor.close()
