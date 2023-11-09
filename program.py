@@ -9,27 +9,27 @@ cursor = cnx.cursor()
 queries_with_variables = {
     'query1': {
         'sql': "SELECT * FROM Flights WHERE DepartureAirport = %s UNION SELECT * FROM Flights WHERE DestinationAirport = %s",
-        'params': ('JFK', 'JFK')  # Replace with variables as needed
+        'params': ('JFK', 'JFK')  
     },
     'query2': {
         'sql': "SELECT Customer.*, Reservation.* FROM Customer, Reservation WHERE Customer.CustomerID = Reservation.CustomerID AND Customer.CustomerID = %s",
-        'params': (5,)  # Replace with a specific CustomerID variable
+        'params': (5,)  
     },
     'query3': {
         'sql': "SELECT DepartureAirport FROM Flights WHERE DepartureAirport = %s UNION SELECT DestinationAirport FROM Flights WHERE DestinationAirport = %s",
-        'params': ('LAX', 'FLL')  # Replace with variables as needed
+        'params': ('LAX', 'FLL')  
     },
     'query4': {
         'sql': "SELECT SUM(AvailableSeats) FROM Flights WHERE FlightNumber = %s",
-        'params': ('101',)  # Replace with a specific AirlineCode variable
+        'params': ('101',)  
     },
     'query5': {
         'sql': "SELECT * FROM Customer WHERE CustomerID IN (SELECT CustomerID FROM Reservation WHERE Reservationid > %s)",
-        'params': ('2',)  # Replace with a specific date variable
+        'params': ('2',)  
     },
     'query6': {
         'sql': "SELECT * FROM Reservation WHERE ReservationID IN (SELECT ReservationID FROM Payment WHERE typeofpayment > %s)",
-        'params': ('PayPal',)  # Replace with a specific payment amount variable
+        'params': ('PayPal',)  
     }
 }
 
@@ -37,7 +37,7 @@ queries_with_variables = {
 for query_name, query_info in queries_with_variables.items():
     cursor.execute(query_info['sql'], query_info['params'])  # Execute the query with host variables
     if query_name in ['query1', 'query2', 'query3', 'query5', 'query6']:
-        # Fetch and print results for SELECT queries
+        # print results for SELECT queries
         results = cursor.fetchall()
         print(f"Results for {query_name}:")
         for row in results:
