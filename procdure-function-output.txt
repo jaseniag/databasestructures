@@ -1,0 +1,2 @@
+Total available seats from stored procedure: 700
+Average flight price: 307.46
