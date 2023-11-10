@@ -24,6 +24,10 @@ except mysql.connector.Error as err:
 cursor.close()
 cnx.close()
 
+
+
+################ Below is the actual SQL script that was used for the procedure and function ###################
+
 # DELIMITER //
 
 # CREATE PROCEDURE GetTotalSeats()

@@ -1,7 +1,7 @@
 import mysql.connector
 
 # Connect to the MySQL database
-cnx = mysql.connector.connect(user='root', password='1a2b3c', host='localhost', database='P2_Schema')
+cnx = mysql.connector.connect(user='root', password='Database123', host='localhost', database='test')
 cursor = cnx.cursor()
 
 def search_criteria():
