@@ -32,15 +32,11 @@ def search_criteria():
         print(f"Price: ${Price}")  
     print("="*50)  # Separator for better readability
 
-    
-    # Add more code to handle round trip, return date, etc.
-
 def seat_selection():
     choose_seat = input("Do you want to choose a seat (yes/no): ")
     cabin_class = input("Cabin class (economy/business/first): ")
     
     if choose_seat.lower() == 'yes':
-        # Add code for seat selection
         seat_number = input("Enter seat number: ")
         print(f"Seat {seat_number} selected in {cabin_class} class.\n")
     else:
