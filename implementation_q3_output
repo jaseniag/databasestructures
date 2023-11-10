@@ -1,0 +1,26 @@
+Round trip (yes/no): no
+Departure date (YYYY-MM-DD): 2023-12-03 08:00:00
+Departure airport: JFK
+Destination airport: LAX
+Number of passengers: 1
+
+Available Flights:
+
+(101, 'JFK', 'LAX', datetime.datetime(2023, 12, 3, 8, 0), Decimal('5.24'), 150, 145, 'Economy', Decimal('600.72'))
+Flight Number: 101
+Departure Date and Time: 5.24
+Departure Airport: LAX
+Destination Airport: 2023-12-03 08:00:00
+Cabin Class: JFK
+Price: 145
+==================================================
+Do you want to choose a seat (yes/no): yes
+Cabin class (economy/business/first): First
+Enter seat number: 2F
+Seat 2F selected in First class.
+
+==================================================
+Full name: Iacopo Nohea Lenzi
+Email address: ilenzi@fau.edu
+Phone number: 1234567890
+Customer details saved successfully.
